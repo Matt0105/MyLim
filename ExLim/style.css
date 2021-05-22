@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url(img/background.jpg);
+  background-size: cover;
+}
+
+.container{
+  width: 1000px;
+  height: 600px;
+  background-color: rgba(0,0,0,0.6);
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 20px;
+}
+
+.logo-container{
+  width: 150px;
+  margin: auto;
+  padding-top: 15px;
+}
+
+.head-button{
+  padding: 5px;
+  border-radius: 20px;
+  background-color: green;
+  border: 1px solid green;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Ubuntu', sans-serif;
+
+  transition: padding 0.3s;
+}
+
+.head-button:hover{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+img{
+  max-width: 150px;
+  margin: auto;
+
+  transition: all 0.1s;
+}
+
+img:hover{
+  transform: scale(1.2, 1.2);
+}
+
+h1{
+  color: limegreen;
+  font-family: 'Staatliches', sans-serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+h2{
+  color: white;
+  display: inline-block;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.button-choice{
+  background-color: limegreen;
+  width: 80%;
+  border-radius: 20px;
+  padding: 8px 8px;
+  text-align: center;
+  margin: auto;
+}
+
+.scooter{
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+span{
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 300;
+}
+
+#charge1, #charge2, #charge3{
+  width: 0%;
+  height: 25px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 2px;
+  font-size: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  padding-bottom: 10px;
+  transition-property: width, opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 1.5s;
+}
+
+/* assegno colore nero a tutte le classi che iniziano per "charge" */
+[id^="charge"] > span{
+  color: black;
+}
+
+#charge1{
+  background-color: orange;
+  opacity: 0;
+}
+
+#charge2{
+  background-color: limegreen;
+  opacity: 0;
+}
+
+#charge3{
+  background-color: red;
+  opacity: 0;
+}
+
+.charge-button{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #0088CC;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  outline: none;
+
+  transition: background-color 0.2s;
+}
+
+.charge-button:hover{
+  background-color: green;
+}
+
+.charge-button:hover + #charge1{
+  width: 30%;
+  opacity: 1;
+}
+
+.charge-button:hover + #charge2{
+  width: 60%;
+  opacity: 1;
+}
+
+.charge-button:hover + #charge3{
+  width: 15%;
+  opacity: 1;
+}
